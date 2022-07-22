@@ -34,6 +34,7 @@ def receive():
 
         print(f"Nickname is {nickname}")
         broadcast(f"{nickname} is connected to the server!\n".encode('utf-8'))
+        client.send("You are now connected to the server".encode('utf-8'))
 
 # Handle Function
 
