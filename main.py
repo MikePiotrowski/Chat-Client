@@ -32,5 +32,8 @@ def receive():
         nicknames.append(nickname)
         clients.append(clients)
 
+        print(f"Nickname is {nickname}")
+        broadcast(f"{nickname} is connected to the server.")
+
 # Handle Function
 
