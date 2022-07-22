@@ -1,7 +1,6 @@
 import socket
 import threading
 
-
 HOST = '192.168.182.1'
 PORT = 9090
 
