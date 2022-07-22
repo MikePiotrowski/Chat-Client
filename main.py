@@ -19,6 +19,15 @@ def broadcast(message):
     for client in clients:
         client.send(message)
 
+def handle(client):
+    while True:
+        try:
+            message = client.recv(1024)
+            print(f"{nicknames}")
+            broadcast(message)
+        except:
+            pass
+
 # Receive Function
 
 def receive():
@@ -35,6 +44,9 @@ def receive():
         print(f"Nickname is {nickname}")
         broadcast(f"{nickname} is connected to the server!\n".encode('utf-8'))
         client.send("You are now connected to the server".encode('utf-8'))
+
+        thread = threading.Thread(tarhet=handle, args=(client,))
+        thread.start()
 
 # Handle Function
 
