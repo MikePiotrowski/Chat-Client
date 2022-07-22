@@ -33,7 +33,7 @@ def receive():
         clients.append(clients)
 
         print(f"Nickname is {nickname}")
-        broadcast(f"{nickname} is connected to the server.")
+        broadcast(f"{nickname} is connected to the server!\n".encode('utf-8'))
 
 # Handle Function
 
