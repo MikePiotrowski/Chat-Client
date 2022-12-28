@@ -1,7 +1,7 @@
 import socket
 import threading
 
-HOST = '192.168.182.1'
+HOST = '192.168.14.131'
 PORT = 9090
 
 server = server.socket(server.AF_INET, socket.SOCK_STREAM)
